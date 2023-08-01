@@ -1,0 +1,44 @@
+{% load static %}
+
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static 'styles/style.css' %}">
+</head>
+
+
+<style>
+body{
+    background-color: white;
+}
+.title {
+    color: #08695C;  
+    text-align: center;
+    padding-top:10px;
+    background-color: white;
+}
+
+form {
+    justify-content: center;
+    background-color: beige;
+    background-color: #906abd;
+    padding:5%;
+    margin: 5%;
+}
+
+
+</style> 
+
+
+<body>
+    
+<h1 class="title">Create Task</h1>
+
+<form method = "POST" action="">
+    {% csrf_token %}
+
+    {{form.as_p}}
+    <a class="btn btn-sm btn-info"  href="{% url 'list' %}">Cancel</a>
+    <input class = "btn btn-sm btn-success" type="submit" name="Update Task">
+
+</form>
+</body>

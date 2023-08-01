@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+{% load static %}
+{% load l10n %}
+
+<link rel="stylesheet" href="{% static 'styles/style.css' %}">
+<body>
+    <div class="item-row">
+    <p><span><b>Task Title:</b></span> {{tasks.title}}</p>
+    <p><b>Task Description: </b>{{tasks.description}}</p>
+    <p><b>Task Created at: </b>{{tasks.created}}</p>
+    <p><b>Task Updated at: </b>{{tasks.updated}}</p>
+    <br>
+    <button class = "btn btn-sm btn-info bg-light" type="submit" > <a href="{% url 'list' %}">Back</a></button>
+    </div>
+    
+
+</body>
+
+
